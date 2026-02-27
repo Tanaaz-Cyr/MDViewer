@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDViewer</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/app.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <span class="app-title">📄 MDViewer</span>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+        <div class="tab active" data-tab="editor">MD Editor</div>
+        <div class="tab" data-tab="viewer">MD Viewer</div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <button class="btn btn-primary" id="openBtn">
+            <span>📂</span> Open
+        </button>
+        <button class="btn btn-primary" id="saveBtn" disabled>
+            <span>💾</span> Save
+        </button>
+        
+        <div style="flex: 1;"></div>
+        
+        <!-- Viewer-specific toolbar -->
+        <div class="tts-controls" id="viewerToolbar" style="display: none;">
+            <select class="voice-select" id="voiceSelect" title="Select voice">
+                <option value="">Default Voice</option>
+            </select>
+            <div style="display: flex; align-items: center; gap: 8px; margin-left: 8px;">
+                <label style="font-size: 12px; color: #808080;">Rate:</label>
+                <input type="range" id="rateSlider" min="100" max="250" value="150" 
+                       style="width: 100px;" title="Speech rate">
+                <span id="rateValue" style="font-size: 12px; color: #D4D4D4; min-width: 30px;">150</span>
+            </div>
+            <button class="btn btn-success" id="speakBtn" disabled>
+                <span>🔊</span> Speak
+            </button>
+            <button class="btn btn-danger" id="stopBtn" disabled>
+                <span>⏹</span> Stop
+            </button>
+            <div class="loading" id="loadingIndicator">
+                <div class="spinner"></div>
+                <span>Speaking...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Editor Content -->
+    <div class="content active" id="editorContent">
+        <div class="editor-container">
+            <div class="line-numbers" id="lineNumbers">1</div>
+            <textarea class="editor" id="editor" placeholder="Open a markdown file or start typing..."></textarea>
+        </div>
+    </div>
+
+    <!-- Viewer Content -->
+    <div class="content" id="viewerContent">
+        <div class="viewer-container">
+            <div class="viewer-content" id="viewer">
+                <div class="no-file">
+                    <div class="no-file-icon">📄</div>
+                    <div class="no-file-text">No file loaded</div>
+                    <div class="no-file-hint">Click "Open" to load a markdown file</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <span id="filePath">No file open</span>
+        <span id="wordCount">0 words</span>
+        <span id="readingStatus"></span>
+    </div>
+
+    <!-- File Input -->
+    <input type="file" id="fileInput" class="file-input" accept=".md,.markdown,.txt">
+
+    <script src="./src/main.js" type="module"></script>
+</body>
+</html>

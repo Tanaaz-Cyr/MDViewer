@@ -1,0 +1,40 @@
+# Build outputs
+build/bin
+build/windows
+
+# Frontend
+node_modules
+frontend/dist
+frontend/node_modules
+frontend/.vite
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# macOS
+.DS_Store
+*.app
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Wails
+.wails-build
+wails_*_temp.txt
+
+# Logs
+*.log
+
