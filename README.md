@@ -189,7 +189,7 @@ This is a personal/educational project. Feel free to fork and modify for your ne
 
 ## Screenshot
 
-![MDViewer Application](screenshot.png)
+![MDViewer Application](screenshot.png) 
 
 *MDViewer showing the MD Viewer tab with text-to-speech controls and rendered markdown content*
 
