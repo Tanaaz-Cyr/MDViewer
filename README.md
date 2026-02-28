@@ -187,3 +187,12 @@ This is a personal/educational project. Feel free to fork and modify for your ne
 - Uses macOS native TTS
 - Inspired by the need for accessible markdown reading tools
 
+## Screenshot
+
+![MDViewer Application](screenshot.png)
+
+*MDViewer showing the MD Viewer tab with text-to-speech controls and rendered markdown content*
+
+## Contact
+
+For questions or suggestions, contact: tazzu.far@gmail.com
